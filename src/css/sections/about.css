@@ -1,0 +1,125 @@
+/* --- ABOUT US SECTION --- */
+.about-us {
+  display: flex;
+  min-height: 800px; /* Slightly taller for more breathing room */
+  overflow: hidden;
+  background-color: var(--color-white);
+  align-items: flex-start; /* Raises the overall alignment of content */
+}
+
+/* --- LEFT SIDE: IMAGES --- */
+.about-us__image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-us__image > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.about-us__eguisi_soup {
+  border-bottom: 8px solid var(--color-creamson);
+  background-color: #fcfcfc;
+}
+
+.about-us__soup {
+  background-color: var(--color-white);
+}
+
+.about-us__eguisi_soup img,
+.about-us__soup img {
+  width: 100%;
+  max-width: 420px; /* Made images larger to match bigger text */
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* --- CENTERED OVERLAY BUTTON --- */
+.about-us__button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 16px 40px; /* Bigger button */
+  min-height: 72px;
+  background: var(--secondary-color);
+  border-radius: 40px 0 0 40px;
+  border: 0;
+  color: #fff;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: -4px 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-us__button:hover {
+  background: var(--primary-color);
+  transform: translateY(-50%) translateX(-5px);
+  box-shadow: -6px 6px 20px rgba(0,0,0,0.15);
+}
+
+.about-us__button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.about-us__button:hover img {
+  transform: translateX(3px);
+}
+
+/* --- RIGHT SIDE: CONTENT --- */
+.about-us__content {
+  flex: 1;
+  padding: 80px 64px; /* Increased top padding to raise text */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from center to flex-start to raise text */
+  background-color: var(--color-creamson);
+}
+
+/* Updated Subtitle Font and Size */
+.about-us__content .subtitle {
+  margin-bottom: 20px;
+  margin-top: 20px; /* Initial breathing room at the top */
+  font-family: var(--playfair-display); /* Changed to Agbalumo */
+  font-size: 24px; /* Bigger size */
+  font-weight: 400;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+/* Bigger Title */
+.about-us__content .title {
+  font-size: 64px; /* Significantly bigger */
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+  margin-bottom: 32px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+/* Clearer Description */
+.about-us__content .description {
+  max-width: 550px;
+  font-family: var(--plus-jakarta-sans);
+  font-size: 20px; /* Bigger size */
+  line-height: 1.8;
+  color: #333;
+}

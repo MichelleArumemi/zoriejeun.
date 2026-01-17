@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/src/assets/rice.png" />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://kit.fontawesome.com/773b9850e2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <title>ZORIEJẸUN | Authentic Nigerian Cuisine</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header__nav">
+            <div class="header__logo">
+                <h4 data-aos="fade-down">ZORIEJẸUN</h4>
+                <div class="header__logo-overlay"></div>
+            </div>
+
+            <ul class="header__menu" data-aos="fade-down">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><img src="/src/assets/search.svg" alt="search icon" /></li>
+            </ul>
+            
+    <div class="header__menu-mobile">
+        <div class="menu-book-toggle" id="menu-toggle">
+            <i class="fa-solid fa-book-open" id="menu-icon"></i>
+        </div>
+    </div>
+
+    <ul class="mobile-drawer" id="mobile-drawer">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about-us">About Us</a></li>
+    </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="/src/assets/jollof.png" alt="Nigerian Jollof Rice" />
+                <div class="hero-image__overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-content-info" data-aos="fade-left">
+                    <h1>Where every meal tells a Nigerian story</h1>
+                    <p>Experience the most popular Nigerian food from anywhere and anytime.</p>
+                    <div class="hero-content__buttons">
+                        <button class="hero-content__order-button">Order Now</button>
+                        <button class="hero-content__play-button">
+                            <img src="/src/assets/play-circle.svg" alt="play" /> How to Order
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-content__testimonial" data-aos="fade-up">
+                    <div class="hero-content__customer flex-center">
+                        <h4>24<span>k+</span></h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="hero-content__review">
+                        <img src="/src/assets/user.png" alt="customer user" />
+                        <p>"This is the best Nigerian food delivery service that ever existed."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us" id="about-us">
+            <div class="about-us__image">
+                <div class="about-us__eguisi_soup">
+                    <img src="/src/assets/eguisi_soup.jpg" alt="bowl of eguisi soup" data-aos="fade-right" />
+                </div>
+
+                <button class="about-us__button">
+                    Learn More
+                    <img src="/src/assets/arrow-up-right.svg" alt="arrow" />
+                </button>
+
+                <div class="about-us__soup">
+                    <img src="/src/assets/soup.jpg" alt="bowl of soup" data-aos="fade-right" />
+                </div>
+            </div>
+
+            <div class="about-us__content" data-aos="fade-left">
+                <p class="subtitle">About Us / Tarihinmu / Gbasara Anyị / Nípa Wa </p>
+                <h3 class="title">Our mission is to bring true Nigerian flavours to you.</h3>
+                <p class="description">We provide the experience of hospitality, the Nigerian mindset of warmth, with our shopping and dining for our customers.</p>
+            </div>
+        </section>
+
+        <section class="popular-foods" id="menu">
+            <h2 class="popular-foods__title" data-aos="flip-up">Popular Food 
+                <p>Abinci mai yayi / Nri na-ewu ewu / Oúnjẹ Gbayì</p>
+            </h2>
+
+            <div class="popular-foods__filters zorie__hide-scrollbar" data-aos="fade-up">
+                <button class="popular-foods__filter-btn active">All</button>
+                <button class="popular-foods__filter-btn"><img src="/src/assets/soup1.png" alt="swallow" /> Swallow</button>
+                <button class="popular-foods__filter-btn"><img src="/src/assets/rice.png" alt="rice" /> Rice Dishes</button>
+                <button class="popular-foods__filter-btn"><img src="/src/assets/suya.png" alt="sides" /> Sides</button>
+                <button class="popular-foods__filter-btn"><img src="/src/assets/soup2.png" alt="soup" /> Soups</button>
+            </div>
+
+            <div class="popular-foods__catalogue" data-aos="fade-up">
+                <article class="popular-foods__card">
+                    <img class="popular-foods__card-image" src="/src/assets/soup1.png" alt="Tuwo Shinkafa" />
+                    <h4 class="popular-foods__card-title">Tuwo Shinkafa</h4>
+                    <div class="popular-foods__card-details flex-between">
+                        <div class="popular-foods__card-rating">
+                            <img src="/src/assets/star.svg" alt="star" /> <p>5.0</p>
+                        </div>
+                        <p class="popular-foods__card-price">₦6,500</p>
+                    </div>
+                </article>
+
+                <article class="popular-foods__card active-card">
+                    <img class="popular-foods__card-image" src="/src/assets/soup1.png" alt="Akpu and Egusi" />
+                    <h4 class="popular-foods__card-title">Akpu & Egusi Soup</h4>
+                    <div class="popular-foods__card-details flex-between">
+                        <div class="popular-foods__card-rating">
+                            <img src="/src/assets/star.svg" alt="star" /> <p>5.0</p>
+                        </div>
+                        <p class="popular-foods__card-price">₦5,000</p>
+                    </div>
+                </article>
+
+                <article class="popular-foods__card">
+                    <img class="popular-foods__card-image" src="/src/assets/soup1.png" alt="Amala and Ewedu" />
+                    <h4 class="popular-foods__card-title">Amala & Ewedu</h4>
+                    <div class="popular-foods__card-details flex-between">
+                        <div class="popular-foods__card-rating">
+                            <img src="/src/assets/star.svg" alt="star" /> <p>5.0</p>
+                        </div>
+                        <p class="popular-foods__card-price">₦10,000</p>
+                    </div>
+                </article>
+            </div>
+
+            <button class="popular-foods__button">
+                Explore Food <img src="/src/assets/arrow-right.svg" alt="arrow" />
+            </button>
+        </section>
+
+        <section class="trending" id="food">
+    <section class="trending-snacks">
+        <div class="trending__content" data-aos="fade-right">
+            <p class="subtitle">What’s Trending / Me ke faruwa? / Kí ló nlo?</p>
+            <h3 class="title">Nigerian Snacks</h3>
+            <p class="description">Experience the taste of the most delicious Nigerian snacks here.</p>
+            
+            <ul class="trending__list flex-between">
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Kuli-Kuli</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Okpa</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Dodo Ikire</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Puff-Puff</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Chin-Chin</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Buns</p></li>
+            </ul>
+        </div>
+
+        <div class="trending__image flex-center">
+            <img src="/src/assets/snacks.jpg" alt="Nigerian Snacks" />
+            
+            <div class="trending__arrow trending__arrow-left">
+                <img src="/src/assets/arrow-vertical.svg" alt="arrow vertical" />
+            </div>
+            <div class="trending__arrow trending__arrow-bottom">
+                <img src="/src/assets/arrow-horizontal.svg" alt="arrow horizontal" />
+            </div>
+        </div>
+    </section>
+
+    <div class="trending__discover" data-aos="zoom-in">
+        <p>Discover</p>
+    </div>
+
+    <section class="trending-drinks">
+        <div class="trending__image flex-center">
+            <img src="/src/assets/drink.jpg" alt="Nigerian Drinks" />
+
+            <div class="trending__arrow trending__arrow-top">
+                <img src="/src/assets/arrow-horizontal.svg" alt="arrow horizontal" />
+            </div>
+            <div class="trending__arrow trending__arrow-right">
+                <img src="/src/assets/arrow-vertical.svg" alt="arrow vertical" />
+            </div>
+        </div>
+
+        <div class="trending__content" data-aos="fade-left">
+            <p class="subtitle">What's Trending? / Ihe na-ewu? / Kí ló nlo?</p>
+            <h3 class="title">Nigerian Drinks</h3>
+            <p class="description">Experience the taste of the most delicious Nigerian drinks here.</p>
+            
+            <ul class="trending__list flex-between">
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Fresh Palm Wine</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Kunun Aya</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Fura da Nono</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Burukutu Brew</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Fresh Zobo</p></li>
+                <li><div class="trending__icon flex-center"><img src="/src/assets/check.svg" alt="check" /></div> <p>Ogogoro</p></li>
+            </ul>
+        </div>
+    </section>
+</section>
+        <section class="subscription flex-center" id="services">
+            <h2 data-aos="flip-down">Get offers straight <br /> to your inbox</h2>
+            <p data-aos="fade-up">Sign up for the ZORIEJẸUN newsletter</p>
+            <div class="subscription__form" data-aos="fade-up">
+                <input type="email" placeholder="Enter your email address"/>
+                <button>Get Started</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer flex-between">
+        <h3 class="footer__logo"><span>ZORIE</span>JẸUN</h3>
+        <ul class="footer__nav">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about-us">About Us</a></li>
+        </ul>
+        <ul class="footer__social">
+            <li class="flex-center"><img src="/src/assets/facebook.svg" alt="facebook" /></li>
+            <li class="flex-center"><img src="/src/assets/instagram.svg" alt="instagram" /></li>
+            <li class="flex-center"><img src="/src/assets/twitter.svg" alt="twitter" /></li>
+        </ul>
+    </footer>
+
+    <script src="src/js/script.js" type="module"></script>
+</body>
+</html>

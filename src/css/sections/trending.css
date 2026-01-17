@@ -1,0 +1,177 @@
+/* --- TRENDING SECTION --- */
+.trending {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.trending__discover {
+  position: absolute;
+  top: 44%;
+  left: 44%;
+  z-index: 10; /* Increased to stay above arrows */
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending__discover p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.trending-snacks, .trending-drinks {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+.trending__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px 64px;
+}
+
+.trending__content .description{
+  font-size: 25px;
+  font-family: var(--playfair-display);
+  color: var(--secondary-color);
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
+/* Using the Agbalumo font you liked for the subtitle */
+.trending__content .subtitle {
+  font-family: var(--playfair-display);
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.trending__content .title {
+  font-family: var(--playfair-display);
+  font-size: 48px;
+  margin-bottom: 24px;
+  color: var(--secondary-color);
+}
+
+.trending__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 25px;
+}
+
+.trending__list li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  min-width: 210px;
+}
+
+.trending__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending__icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.trending__list p {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+}
+
+.trending__image {
+  flex: 1;
+  position: relative;
+  padding: 32px 64px;
+  background-color: var(--color-white);
+}
+
+/* Main Food Images */
+.trending__image > img {
+  width: 280px; 
+  height: 280px;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* --- REVERTED ARROW POSITIONING --- */
+.trending__arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.trending__arrow img {
+  object-fit: contain;
+}
+
+/* Vertical Arrow on the left edge */
+.trending__arrow-left {
+  left: -2.5px;
+  top: 12%;
+}
+
+.trending__arrow-left img,
+.trending__arrow-top img {
+  width: auto;
+  height: 100%;
+}
+
+/* Horizontal Arrow on the top edge */
+.trending__arrow-top {
+  top: -10.5px;
+  left: 12%;
+}
+
+/* Horizontal Arrow on the bottom edge */
+.trending__arrow-bottom {
+  bottom: -6.5px;
+  right: 12%;
+}
+
+.trending__arrow-bottom img,
+.trending__arrow-right img {
+  width: 100%;
+  height: auto;
+}
+
+/* Vertical Arrow on the right edge */
+.trending__arrow-right {
+  right: -2.5px;
+  bottom: 12%;
+}

@@ -1,0 +1,1086 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+/* --- SECTION IMPORTS --- */
+@import url("sections/header.css");
+@import url("sections/hero.css");
+@import url("sections/about.css");
+@import url("sections/popular.css");
+@import url("sections/trending.css");
+@import url("sections/subscribe.css");
+@import url("sections/footer.css");
+
+/* --- CSS VARIABLES --- */
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --primary-color: #008751;
+  --secondary-color: #910c0c;
+  --accent-gold: #ffc107;
+  --black-charcoal: #1a1a1a;
+  --gray-subtle: #4a4a4a;
+  --color-white: #ffffff;
+
+}
+
+/* --- BASE STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  color: var(--black-charcoal);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- UTILITY CLASSES --- */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--primary-color);
+  opacity: 0.8;
+  letter-spacing: -0.01em;
+}
+
+/* --- POPULAR FOODS CARD --- */
+.popular-foods__card-details {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 20px !important;
+}
+
+.popular-foods__card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.popular-foods__card-price {
+  flex-shrink: 0;
+}
+
+/* --- MOBILE DRAWER --- */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  z-index: 1001;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  list-style: none;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-drawer.active {
+  right: 0 !important;
+}
+
+.mobile-drawer li a {
+  color: var(--color-white);
+  font-family: var(--plus-jakarta-sans);
+  font-size: 24px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.mobile-drawer li a:hover {
+  color: var(--accent-gold);
+}
+
+/* --- MENU TOGGLE --- */
+.header__menu-mobile {
+  display: none;
+}
+
+.menu-book-toggle {
+  font-size: 30px;
+  color: var(--color-white);
+  cursor: pointer;
+  z-index: 1002;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.menu-book-toggle.active {
+  transform: rotate(-10deg) scale(1.1);
+  color: var(--accent-gold);
+}
+
+.menu-book-toggle i {
+  font-size: 28px;
+  color: var(--color-white);
+}
+
+/* ========================================== */
+/*         RESPONSIVE BREAKPOINTS             */
+/* ========================================== */
+
+/* 1. TABLETS & SMALL LAPTOPS (≤1060px) */
+@media screen and (max-width: 1060px) {
+  /* Hero - Stack vertically */
+  .hero {
+    flex-direction: column !important;
+  }
+
+  .hero-image img {
+    width: 100%;
+    transform: none !important;
+  }
+
+  /* About section - Keep desktop-like layout */
+.about-us {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  padding: 60px 20px 80px 20px !important;
+  gap: 32px !important;
+  position: relative !important;
+}
+
+.about-us__image {
+  display: flex !important;
+  width: 45% !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  justify-content: center !important;
+}
+
+.about-us__image img {
+  width: 100% !important;
+  max-width: 180px !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+.about-us__content {
+  width: 55% !important;
+  padding: 0 !important;
+  text-align: left !important;
+  flex-direction: column !important
+}
+
+.about-us__content .title {
+  font-size: 36px !important;
+  line-height: 1.2 !important;
+  margin: 12px 0 !important;
+}
+
+.about-us__content .description {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.about-us__button {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 16px 32px 16px 40px !important;
+  font-size: 16px !important;
+  background: var(--secondary-color) !important;
+  color: #fff !important;
+  border-radius: 32px 0 0 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.about-us__button img {
+  margin-left: 10px !important;
+  width: 18px !important;
+  height: 18px !important;
+  filter: brightness(0) invert(1) !important;
+}
+  /* Trending - Maintain split-screen grid layout */
+  .trending-snacks,
+  .trending-drinks {
+    flex-direction: row !important;
+    min-height: 400px !important;
+  }
+
+  .trending-drinks {
+    flex-direction: row-reverse !important;
+  }
+
+  .trending__content {
+    padding: 15px !important;
+    flex: 1.2 !important;
+  }
+
+  .trending__content .title {
+    font-size: 22px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .trending__content .description {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .trending__list {
+    gap: 8px !important;
+    padding-top: 10px !important;
+  }
+
+  .trending__list li {
+    min-width: 45% !important;
+    gap: 6px !important;
+  }
+
+  .trending__list p {
+    font-size: 11px !important;
+  }
+
+  .trending__image {
+    flex: 1 !important;
+    display: flex !important;
+    padding: 0 !important;
+    background-color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  .trending__image > img {
+    display: block;
+    width: 130px !important;
+    height: 130px !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .trending__discover,
+  .trending__arrow {
+    display: none !important;
+  }
+
+  /* Section spacing reset */
+  section.popular-foods,
+  .popular-foods {
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  /* Activate mobile navigation */
+  .header__menu { 
+    display: none !important;
+  }
+
+  .header__menu-mobile {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-drawer {
+    display: flex;
+  }
+
+  .header__nav {
+    padding: 16px 20px;
+    background: var(--primary-color) !important;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .header__logo h4 {
+    color: var(--color-white) !important;
+  }
+
+  .menu-book-toggle {
+    color: var(--color-white) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .menu-book-toggle i {
+    font-size: 28px;
+    color: var(--color-white);
+  }
+  
+  /* About section - Keep desktop-like layout */
+  .about-us {
+    flex-direction: row !important;
+    padding: 50px 20px !important;
+    gap: 28px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    position: relative !important;
+    padding-bottom: 60px !important;
+  }
+
+  .about-us__image {
+    display: flex !important;
+    width: 45% !important;
+    gap: 15px !important;
+  }
+
+  .about-us__image img {
+    width: 140px !important;
+  }
+
+  .about-us__content {
+    width: 55% !important;
+    padding: 0 !important;
+    text-align: left !important;
+    flex-direction: column !important
+  }
+
+  .about-us__content .title {
+    font-size: 32px !important;
+  }
+
+.about-us__button {
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+    width: 160px !important;
+    margin-top: 16px !important;
+    position: relative !important;
+    left: 200px !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+  }
+  
+  .about-us__button:hover {
+    background: var(--primary-color) !important;
+    color: var(--color-white) !important;
+  }
+  
+  .about-us__button img {
+    margin-left: 6px !important;
+    width: 14px !important;
+    height: 14px !important;
+    filter: brightness(0) invert(1) !important;
+  }
+
+  /* Popular foods spacing */
+  section.popular-foods,
+  .popular-foods {
+    margin: 0 !important;
+    padding: 20px 0 40px 0 !important;
+  }
+
+  /* Subscription - Inline form layout */
+   .subscription {
+    padding: 60px 20px !important;
+    margin: 40px 20px !important;
+    background: var(--accent-gold);
+    text-align: center;
+  }
+
+  .subscription h2 {
+    font-size: 48px !important;
+    line-height: 1.3 !important;
+    color: var(--secondary-color);
+    margin-bottom: 16px !important;
+  }
+
+  .subscription p {
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 32px !important;
+    font-family: var(--plus-jakarta-sans);
+  }
+
+  .subscription__form {
+    min-width: auto !important;
+    /* max-width: 100% !important; */
+    width: 70% !important;
+    flex-direction: row !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 14px 14px 14px 24px !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    background: transparent !important;
+    gap: 10px !important;
+    margin: 0 auto !important;
+    justify-content: space-between !important;
+  }
+
+  .subscription__form input {
+    flex: 1 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    color: var(--color-white) !important;
+    font-size: 16px !important;
+    font-family: var(--plus-jakarta-sans);
+    outline: none;
+  }
+
+  .subscription__form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-family: var(--plus-jakarta-sans);
+  }
+
+  .subscription__form button {
+    flex-shrink: 0 !important;
+    width: auto !important;
+    min-width: 100px !important;
+    padding: 18px 24px !important;
+    border-radius: 46px !important;
+    background: var(--primary-color) !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-family: var(--plus-jakarta-sans);
+    transition: all 0.3s ease;
+  }
+
+  .subscription__form button:hover {
+    background: var(--secondary-color) !important;
+  }
+}
+
+/* 3. MEDIUM MOBILE (≤768px) */
+@media screen and (max-width: 768px) {
+     .subscription {
+    padding: 50px 20px !important;
+    margin: 30px 20px !important;
+  }
+
+  .subscription h2 {
+    font-size: 40px !important;
+  }
+
+  .subscription p {
+    font-size: 16px !important;
+  }
+
+  .subscription__form {
+    padding: 12px 12px 12px 20px !important;
+  }
+
+  .subscription__form input {
+    font-size: 15px !important;
+  }
+
+  .subscription__form input::placeholder {
+    font-size: 15px;
+  }
+
+  .subscription__form button {
+    min-width: 130px !important;
+    padding: 16px 20px !important;
+    font-size: 15px !important;
+  }
+
+  /* Header */
+  .header__logo h4 {
+    font-size: 28px;
+  }
+
+  /* Hero optimization */
+  .hero {
+    flex-direction: column !important;
+  }
+
+  .hero-content {
+    background-color: var(--color-white);
+  }
+
+  .hero-content-info h1 {
+    font-size: 42px !important;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .hero-content-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content__buttons {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-content__buttons button {
+    width: auto;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .hero-content__order-button {
+    flex-shrink: 0;
+  }
+
+  /* Testimonial - Horizontal layout */
+  .hero-content__testimonial {
+    flex-direction: row !important;
+    gap: 20px;
+    padding: 20px;
+    background: var(--color-white) !important;
+    border-top: 1px solid rgba(145, 12, 12, 0.1);
+    align-items: center;
+  }
+
+  .hero-content__customer {
+    flex-shrink: 0;
+  }
+
+  .hero-content__customer h4 {
+    font-size: 32px;
+  }
+
+  .hero-content__review {
+    flex: 1;
+    border-left: 1px solid rgba(145, 12, 12, 0.1) !important;
+    padding-left: 20px !important;
+    padding-top: 0;
+  }
+
+  .hero-content__review p {
+    font-size: 14px;
+  }
+
+  /* About section - Desktop-like layout */
+  .about-us {
+    flex-direction: row !important;
+    padding: 40px 20px 50px 20px !important;
+    gap: 24px !important;
+    display: flex !important;
+    margin: 0 !important;
+    position: relative !important;
+  }
+
+  .about-us__image {
+    display: flex !important;
+    width: 45% !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    align-items: center !important;
+  }
+
+  .about-us__image img {
+    width: 120px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+  }
+
+  .about-us__content {
+    width: 55% !important;
+    padding: 0 !important;
+    display: block !important;
+    flex-direction: column !important
+  }
+
+  .about-us__content .subtitle {
+    font-size: 16px !important;
+    color: var(--primary-color) !important;
+    margin-bottom: 8px !important;
+  }
+
+  .about-us__content .title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin: 8px 0 12px 0 !important;
+    color: var(--secondary-color) !important;
+    font-family: var(--playfair-display) !important;
+  }
+
+  .about-us__content .description {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: var(--black-charcoal) !important;
+    opacity: 0.9 !important;
+    margin: 0 !important;
+  }
+  
+  .about-us__button {
+    padding: 10px 18px !important;
+    font-size: 13px !important;
+    min-width: 140px !important;
+    margin-top: 14px !important;
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+  }
+  
+  .about-us__button:hover {
+    background: var(--primary-color) !important;
+    color: var(--color-white) !important;
+    border-color: var(--primary-color) !important;
+  }
+  
+  .about-us__button img {
+    margin-left: 6px !important;
+    width: 14px !important;
+    height: 14px !important;
+    filter: brightness(0) invert(1) !important;
+  }
+
+  /* Popular foods */
+  .popular-foods {
+    padding: 20px 0 !important;
+    margin: 0 !important;
+  }
+
+  .popular-foods__title {
+    font-size: 36px !important;
+    padding: 0 20px;
+    margin: 0 0 20px 0 !important;
+  }
+
+  .popular-foods__title p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .popular-foods__filters {
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .popular-foods__filter-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .popular-foods__card {
+    min-width: 280px;
+  }
+
+  .popular-foods__card-title {
+    font-size: 18px;
+  }
+
+  .popular-foods__card-details {
+    gap: 8px;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .popular-foods__card-price {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .popular-foods__button {
+    display: flex;
+    margin: 32px auto;
+    justify-content: center;
+  }
+
+  /* Trending section - Stack vertically like desktop */
+  .trending-snacks,
+  .trending-drinks {
+    flex-direction: column !important;
+    min-height: auto !important;
+    background-color: var(--color-white);
+  }
+
+  .trending__content {
+    padding: 40px 20px 30px 20px !important;
+    width: 100%;
+    background-color: var(--color-white);
+  }
+
+  .trending__content .subtitle {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    opacity: 0.8;
+  }
+
+  .trending__content .title {
+    font-size: 32px !important;
+    margin-bottom: 12px !important;
+    color: var(--secondary-color);
+    font-family: var(--playfair-display);
+  }
+
+  .trending__content .description {
+    font-size: 15px !important;
+    margin-bottom: 24px !important;
+    line-height: 1.6;
+    color: var(--black-charcoal);
+  }
+
+  .trending__list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 0 !important;
+    list-style: none;
+    padding: 0;
+  }
+
+  .trending__list li {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .trending__list li p {
+    font-size: 15px !important;
+    margin: 0;
+    color: var(--black-charcoal);
+  }
+
+  .trending__icon {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .trending__image {
+    display: flex !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 50px 20px !important;
+    background-color: var(--color-white) !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .trending__image img {
+    display: block;
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: contain !important;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer__nav,
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+/* 4. SMALL MOBILE (≤550px) */
+@media screen and (max-width: 550px) {
+  /* Header */
+  .header__logo h4 {
+    font-size: 24px;
+  }
+
+  .header__nav {
+    padding: 12px 16px;
+  }
+
+  /* Hero - More compact */
+  .hero {
+    flex-direction: column !important;
+  }
+
+  .hero-content {
+    background-color: var(--color-white) !important;
+  }
+
+  .hero-content-info h1 {
+    font-size: 34px !important;
+    line-height: 1.1;
+  }
+
+  .hero-content-info p {
+    font-size: 15px;
+  }
+
+  .hero-content-info,
+  .trending__content,
+  .popular-foods {
+    padding: 32px 16px !important;
+  }
+
+  .hero-content__buttons {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-content__buttons button {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .hero-content__order-button {
+    flex-shrink: 0;
+  }
+
+  /* Testimonial */
+  .hero-content__testimonial {
+    padding: 16px;
+    background: var(--color-white) !important;
+    border-top: 1px solid rgba(145, 12, 12, 0.1);
+    flex-direction: row !important;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .hero-content__customer {
+    flex-shrink: 0;
+  }
+
+  .hero-content__customer h4 {
+    font-size: 28px;
+  }
+
+  .hero-content__customer p {
+    font-size: 13px;
+  }
+
+  .hero-content__review {
+    flex: 1;
+    padding: 0;
+    padding-left: 16px !important;
+    border-left: 1px solid rgba(145, 12, 12, 0.1) !important;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .hero-content__review img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-content__review p {
+    font-size: 13px;
+  }
+
+  /* About section - Desktop-like layout */
+  .about-us {
+    flex-direction: row !important;
+    padding: 32px 16px 45px 16px !important;
+    gap: 20px !important;
+    display: flex !important;
+    margin: 0 !important;
+    position: relative !important;
+  }
+
+  .about-us__image {
+    display: flex !important;
+    width: 40% !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .about-us__image img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 4px !important;
+  }
+
+  .about-us__content {
+    width: 60% !important;
+    padding: 0 !important;
+    flex-direction: column !important
+  }
+
+  .about-us__content .subtitle {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .about-us__content .title {
+    font-size: 24px !important;
+    margin: 6px 0 10px 0 !important;
+  }
+
+  .about-us__content .description {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .about-us__button {
+    font-size: 10px !important;
+    padding: -6px -8px !important;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    min-height: 32px !important;
+    margin-top: 8px !important;
+    width: 10px !important;
+    margin-left: -80px !important;
+    margin-right: 5px !important;
+    border-width: -1px !important;
+  }
+  
+  .about-us__button:hover {
+    background: var(--primary-color) !important;
+    color: var(--color-white) !important;
+    border-color: var(--primary-color) !important;
+  }
+  
+  .about-us__button img {
+    margin-left: 8px !important;
+    width: 16px !important;
+    height: 16px !important;
+    filter: brightness(0) invert(1) !important;
+  }
+
+  /* Trending - Maintain split-screen grid layout */
+  .trending-snacks,
+  .trending-drinks {
+    flex-direction: row !important;
+    min-height: 400px !important;
+  }
+
+  .trending-drinks {
+    flex-direction: row-reverse !important;
+  }
+
+  .trending__content {
+    padding: 15px !important;
+    flex: 1.2 !important;
+  }
+
+  .trending__content .title {
+    font-size: 22px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .trending__content .description {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .trending__list {
+    gap: 8px !important;
+    padding-top: 10px !important;
+  }
+
+  .trending__list li {
+    min-width: 45% !important;
+    gap: 6px !important;
+  }
+
+  .trending__list p {
+    font-size: 11px !important;
+  }
+
+  .trending__image {
+    flex: 1 !important;
+    display: flex !important;
+    padding: 0 !important;
+    background-color: var(--color-white);
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  .trending__image > img {
+    display: block;
+    width: 130px !important;
+    height: 130px !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  .trending__discover,
+  .trending__arrow {
+    display: none !important;
+  }
+
+  /* Section spacing reset */
+  section.popular-foods,
+  .popular-foods {
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+/* FORCE MOBILE MENU FIX - Add at the very bottom */
+@media screen and (max-width: 1060px) {
+  .header__menu {
+    display: none !important;
+  }
+  
+  .header__menu-mobile {
+    display: flex !important;
+  }
+  
+  .header__nav {
+    background: var(--primary-color) !important;
+  }
+  
+  .header__logo h4 {
+    color: var(--color-white) !important;
+  }
+}
