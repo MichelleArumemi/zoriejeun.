@@ -4,8 +4,12 @@ import star from '/src/assets/star.svg'    // ✅ Same directory level
 // Ensure soup1 and soup2 are imported if you are using them in your 'cards' array!
 // import soup1 from '../assets/soup1.png' 
 
+import { inject } from "@vercel/analytics";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+// Initialize Vercel Web Analytics
+inject();
 
 // Init AOS animation with faster settings
 AOS.init({
